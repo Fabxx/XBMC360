@@ -154,7 +154,7 @@ NOTE FOR LINUX USERS:
 
 If using under wine, instead of `C:\` you have to write the index disc as: `Z\\\\`, then each separator must have a double slash, example:
 
-`Z:\\\\media\\username\\mydisc\\XBMC\\MC360\\media\\\\bkgd_frames`
+`Z:\\\\media\\username\\mydisc\\XBMC\\MC360\\media\\bkgd_frames`
 
 
 # Controller Support
