@@ -100,6 +100,8 @@ NOTE 3: For linux users i've made a python script generator that can run .sh fil
         you can geenerate sh files using LinuxGSG in my repo, then run the generator to recursively parse the sh files
         and write python files automatically.
 
+NOTE 4: When launching apps, do NOT reduce XBMC to icon, or else the window tries to take priority and makes the system lag.
+
 then you can go into "System" blade > Memory > File Explorer
 
 Q: Drive > scripts. You can also add a shortcut to the folder you need with "add sources"
