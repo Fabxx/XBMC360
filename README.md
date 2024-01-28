@@ -24,7 +24,7 @@ based off MC360 2.1, which fixes some paths detections to add sources.
 
 # Installation
 
-Download: https://drive.google.com/file/d/1_EIrXUqb2obHijUQWVt8S0l3jQfX276r/view?usp=sharing
+Download: https://drive.google.com/file/d/1HyCy0nqzdpDrzEMo6B-4n_Uf7saQMRxT/view?usp=sharing
 
 1) run the XBMC9.11 installer, it is recommended to install it in default path or `C:\` folder.
 
