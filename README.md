@@ -105,6 +105,11 @@ then you can go into "System" blade > Memory > File Explorer
 Q: Drive > scripts. You can also add a shortcut to the folder you need with "add sources"
 
 
+https://github.com/Fabxx/Xbox-360-Blades-to-PC/assets/30447649/0bb34304-7883-4215-8595-1eb6d4703eff
+
+
+
+
 # Fix Animation Loop (if broken)
 
 As you can see in media i've provided the "bkgd_frames" folder. This should already fix the animation loop but if it doesn't
