@@ -141,3 +141,10 @@ NOTE FOR LINUX USERS:
 If using under wine, instead of `C:\` you have to write the index disc as: `Z\\\\`, then each separator must have a double slash, example:
 
 `Z:\\\\media\\username\\mydisc\\XBMC\\MC360\\media\\\\bkgd_frames`
+
+
+# Controller Support
+
+Controllers need to be manually mapped. Sources to do this are under `XBMC/system/keymaps`
+
+it provides documentation on how to map controllers. If you want to provide xml that map controllers feel free to submit one.
