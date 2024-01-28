@@ -1,5 +1,6 @@
 # Xbox-360-Blades-to-PC
 this is for XBMC 9.11 on Desktop, Linux (wine) and Windows
+Skin was made by: Team BlackBolt
 
 
 https://github.com/Fabxx/Xbox-360-Blades-to-PC/assets/30447649/db256de7-5565-4747-bdf8-3d0a4b062d38
