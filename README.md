@@ -1,4 +1,8 @@
 # Xbox-360-Blades-to-PC
+
+![xbmclive_homelogo](https://github.com/Fabxx/Xbox-360-Blades-to-PC/assets/30447649/585efb68-ec02-43cd-8541-7dbe5fd7d583)
+
+
 this is for XBMC 9.11 on Desktop, Linux (wine) and Windows
 Skin was made by: Team BlackBolt
 
@@ -101,9 +105,7 @@ then you can go into "System" blade > Memory > File Explorer
 Q: Drive > scripts. You can also add a shortcut to the folder you need with "add sources"
 
 
-# Animation Loop Fix
-
-ANIMATION LOOP FIX
+# Fix Animation Loop (if broken)
 
 As you can see in media i've provided the "bkgd_frames" folder. This should already fix the animation loop but if it doesn't
 do these steps:
