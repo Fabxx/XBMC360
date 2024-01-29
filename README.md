@@ -159,8 +159,84 @@ If using under wine, instead of `C:\` you have to write the index disc as: `Z\\\
 `Z:\\\\media\\username\\mydisc\\XBMC\\MC360\\media\\bkgd_frames`
 
 
-# Controller Support
+# Controller Mappings
 
-Controllers need to be manually mapped. Sources to do this are under `XBMC/system/keymaps`
+enable debugging under System > System settings > Debugging in XBMC
 
-it provides documentation on how to map controllers. If you want to provide xml that map controllers feel free to submit one.
+now when you press a button on your controller in the XBMC.log file, located in C:\User\AppData\Roaming, you will notice these log messages:
+```
+02:09:05 T:8784 M:4294967295   DEBUG: Joystick 0 button 1 Down
+02:09:05 T:8784 M:4294967295   DEBUG: Joystick 0 button 1 Up
+```
+
+gather all button IDs by pressing all buttons on controllers, then in the log file check the name of the detected controller, example in my case:
+
+```
+02:08:26 T:8784 M:4294967295  NOTICE: Enabled Joystick: Controller (XBOX 360 For Windows)
+```
+
+Now go into XBMC/system/Keymaps, here you need `gamepad.xml`
+
+If you use a logitech controller or similar layouts, you can copy paste the file `joystick.Logitech.RumblePad.2.xml`
+
+rename it into the joystick name you've found in the log. Don't put spaces, use dots like the original file name. Example:
+
+`joystick.Controller.(XBOX.360.For.Windows)`
+
+NOTE: under wine you should have: `wine joystick driver` as the gamepad name
+
+open `gamepad.xml` and `your controller xml` with notepad++ or anything useful for xml editing.
+
+`gamepad.xml` contains the button definitions for XBMC, for example A is used to "Select" action, B is used to "Previous menu" action, and so on.
+
+You have to compare your button IDs and change the button ID in the action of your copy-pasted xml.
+
+example:
+```
+<button id="2">Select</button>
+<button id="3">PreviousMenu</button>
+```
+
+in gamepad.xml select and previousmenu are:
+```
+ <A>Select</A>
+ <B>ParentDir</B>
+```
+
+NOTE: Different menus can use different actions for same buttons.
+
+ in my XBMC.log when i press A and B i have:
+ 
+```
+ Joystick 0 button 1 Down for A
+ Joystick 0 button 2 Down for B
+```
+
+when i press B and X i have
+```
+ Joystick 0 button 2 Down for A
+ Joystick 0 button 3 Down for B
+```
+
+ so now the original config uses B and X to select and exit a window, which is wrong. So i replace it with my IDs:
+ 
+```
+<button id="1">Select</button>
+<button id="2">PreviousMenu</button>
+```
+
+and save the file.
+
+NOTE: for d-pads the button is indicated as "hat":
+
+`Joystick 0 hat 1 Down`
+ 
+Also, change all the `name` controller parameters into your game contorller name.
+
+Example:
+
+<joystick name="Logitech Logitech Cordless RumblePad 2">
+
+replace ALL of these with your controller name, in my case:
+
+<joystick name="Controller (XBOX 360 For Windows)">
