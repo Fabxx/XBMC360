@@ -28,8 +28,6 @@ based off MC360 2.1, which fixes some paths detections to add sources.
 
 # Installation
 
-Download: WILL BE UPDATED SOON!
-
 1) run the XBMC9.11 installer, it is recommended to install it in default path or `C:\` folder.
 
   -You can also choose to make it a portable installation in the same C: path, so settings will be saved on the same folder.
