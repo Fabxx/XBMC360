@@ -126,11 +126,8 @@ do these steps:
 	<defaultresolution>pal</defaultresolution>
  	 <defaultresolutionwide>pal16x9</defaultresolutionwide>
 ```
- 	 
- 	you can keep them as default or change them based on the region folder you want to use inside MC360 2.1 folder.
- 	i recommend to leave it to default unless you have refresh rate issues.
 
-2) Get in the folder you've chosen in those settings, based on your aspect ratio.
+2) Get in the indicated folder based on your aspect ratio.
    
 3) Open `includes.xml`, find this section:
 
