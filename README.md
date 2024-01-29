@@ -225,6 +225,12 @@ when i press B and X i have
 <button id="2">PreviousMenu</button>
 ```
 
+you can also add a mapping if it's not available, like if you just want to go up a single folder you need ParentDir mapping:
+
+`<button id="3">ParentDir</button>`
+
+in my case i mapped it to X
+
 and save the file.
 
 NOTE: for d-pads the button is indicated as "hat":
