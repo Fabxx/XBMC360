@@ -28,7 +28,7 @@ based off MC360 2.1, which fixes some paths detections to add sources.
 
 # Installation
 
-Download: https://drive.google.com/file/d/1HyCy0nqzdpDrzEMo6B-4n_Uf7saQMRxT/view?usp=sharing
+Download: WILL BE UPDATED SOON!
 
 1) run the XBMC9.11 installer, it is recommended to install it in default path or `C:\` folder.
 
@@ -183,7 +183,7 @@ rename it into the joystick name you've found in the log. Don't put spaces, use 
 
 `joystick.Controller.(XBOX.360.For.Windows)`
 
-NOTE: under wine you should have: `wine joystick driver` as the gamepad name
+NOTE: under wine you should have: `Wine joystick driver` as the gamepad name
 
 open `gamepad.xml` and `your controller xml` with notepad++ or anything useful for xml editing.
 
@@ -231,13 +231,11 @@ you can also add a mapping if it's not available, like if you just want to go up
 
 in my case i mapped it to X
 
-and save the file.
-
 NOTE: for d-pads the button is indicated as "hat":
 
 `Joystick 0 hat 1 Down`
  
-Also, change all the `name` controller parameters into your game contorller name.
+Also, change all the `name` controller parameters into your game controller name.
 
 Example:
 
@@ -248,4 +246,7 @@ replace ALL of these with your controller name, in my case:
 <joystick name="Controller (XBOX 360 For Windows)">
 
 
-NOTE: I provided a pre-defined controller mapping for generic Xbox 360 controllers for windows
+NOTE: I provided a pre-defined controller mapping for generic Xbox 360 controllers for windows and wine
+
+NOTE 2: the controller name but be Exactly the same as shown in the log, there must be no difference
+	in terms of Upper/lower case letters.
