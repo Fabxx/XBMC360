@@ -190,6 +190,8 @@ open `gamepad.xml` and `your controller xml` with notepad++ or anything useful f
 
 You have to compare your button IDs and change the button ID in the action of your copy-pasted xml.
 
+Also, the main section is the `<global>` section that maps the main keys
+
 example:
 ```
 <button id="2">Select</button>
