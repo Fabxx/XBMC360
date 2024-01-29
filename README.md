@@ -246,3 +246,6 @@ Example:
 replace ALL of these with your controller name, in my case:
 
 <joystick name="Controller (XBOX 360 For Windows)">
+
+
+NOTE: I provided a pre-defined controller mapping for generic Xbox 360 controllers for windows
