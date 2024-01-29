@@ -98,7 +98,8 @@ command="cd \"/path/to\\ my/exe\""
 
 NOTE 3: For linux users i've made a python script generator that can run .sh files directly to make things easier.
         you can geenerate sh files using LinuxGSG in my repo, then run the generator to recursively parse the sh files
-        and write python files automatically.
+        and write python files automatically. The script can be edited because it expects`xfce4-terminal`
+	so you can change that to the command of your terminal that you use.
 
 NOTE 4: When launching apps, do NOT reduce XBMC to icon, or else the window tries to take priority and makes the system lag.
 
