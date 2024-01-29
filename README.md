@@ -163,7 +163,7 @@ If using under wine, instead of `C:\` you have to write the index disc as: `Z\\\
 
 enable debugging under System > System settings > Debugging in XBMC
 
-now when you press a button on your controller in the XBMC.log file, located in C:\User\AppData\Roaming, you will notice these log messages:
+now when you press a button on your controller in the XBMC.log file, located in C:\User\AppData\Roaming\XBMC, you will notice these log messages:
 ```
 02:09:05 T:8784 M:4294967295   DEBUG: Joystick 0 button 1 Down
 02:09:05 T:8784 M:4294967295   DEBUG: Joystick 0 button 1 Up
