@@ -246,5 +246,5 @@ replace ALL of these with your controller name, in my case:
 
 NOTE: I provided a pre-defined controller mapping for generic Xbox 360 controllers for windows and wine
 
-NOTE 2: the controller name but be Exactly the same as shown in the log, there must be no difference
+NOTE 2: the controller name must be Exactly the same as shown in the log, there must be no difference
 	in terms of Upper/lower case letters.
