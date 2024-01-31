@@ -63,6 +63,9 @@ when you're gonna run the script it will play the xbox 360 boot screen, then run
 
 # Making application launchers
 
+NOTE: Until the script generators are ready you'll have to follow this method. When the scripts for windows are finished
+      the script generation will be simpler.
+
 XBMC Supports python, so you can create game/emulator runners with python scripts.
 
 Install lastes python version on windows/linux, then go into "scripts" folder of XBMC
