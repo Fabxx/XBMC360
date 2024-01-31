@@ -112,7 +112,9 @@ https://github.com/Fabxx/Xbox-360-Blades-to-PC/assets/30447649/13c7ee34-70fd-40c
 
 
 
-https://github.com/Fabxx/Xbox-360-Blades-to-PC/assets/30447649/0bb34304-7883-4215-8595-1eb6d4703eff
+https://github.com/Fabxx/Xbox-360-Blades-to-PC/assets/30447649/1c55ba55-25d1-423b-8d3b-c725c419a1ee
+
+
 
 
 
