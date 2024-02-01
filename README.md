@@ -76,10 +76,11 @@ on windows:
 ```
 import os
 
-command="cd \"DiscIndex:\\\Path\\to\\.exe\\\" & .\\your.exe"
+command="cd 'DiscIndex:\\Path\\to\\executable\\" & .\\your.exe"
 
 os.system(command)
 ```
+
 ```
 linux:
 
