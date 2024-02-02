@@ -32,6 +32,7 @@ based off MC360 2.1, which fixes some paths detections to add sources.
 1) run the XBMC9.11 installer and install XBMC where you want.
 
   -You can also choose to make it a portable installation, so settings will be saved in the install same folder.
+
   -If installing on default path under "Program Files (x86)", when you want to create scripts you'll need to give admin permissions
    to modify the folder. If you want to avoid this, simply install under C:\ or any other path.
 
