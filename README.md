@@ -1,4 +1,4 @@
-# Xbox-360-Blades-to-PC
+# XBMC360
 
 ![xbmclive_homelogo](https://github.com/Fabxx/Xbox-360-Blades-to-PC/assets/30447649/585efb68-ec02-43cd-8541-7dbe5fd7d583)
 
