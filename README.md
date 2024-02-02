@@ -29,9 +29,11 @@ based off MC360 2.1, which fixes some paths detections to add sources.
 
 # Installation
 
-1) run the XBMC9.11 installer, it is recommended to install it in default path or `C:\` folder.
+1) run the XBMC9.11 installer and install XBMC where you want.
 
-  -You can also choose to make it a portable installation in the same C: path, so settings will be saved on the same folder.
+  -You can also choose to make it a portable installation, so settings will be saved in the install same folder.
+  -If installing on default path under "Program Files (x86)", when you want to create scripts you'll need to give admin permissions
+   to modify the folder. If you want to avoid this, simply install under C:\ or any other path.
 
 2) Drag & drop MC360 2.1 Folder into skins folder of XBMC, then select it from system settings of XBMC
 
