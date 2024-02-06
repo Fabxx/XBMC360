@@ -64,10 +64,7 @@ the file is self-explanatory, just change the paths with the stuff you need to p
 
 when you're gonna run the script it will play the xbox 360 boot screen, then run XBMC
 
-# Making application launchers
-
-NOTE: Until the script generators are ready you'll have to follow this method. When the scripts for windows are finished
-      the script generation will be simpler.
+# App Launcher [Windows - manual]
 
 XBMC Supports python, so you can create game/emulator runners with python scripts.
 
@@ -75,7 +72,6 @@ Install lastes python version on windows/linux, then go into "scripts" folder of
 
 make a subfolder if you want so you can create script categories, create a .py file and add this
 
-on windows:
 ```
 import os
 
@@ -83,6 +79,7 @@ command="cd 'DiscIndex:\\Path\\to\\executable\\" & .\\your.exe"
 
 os.system(command)
 ```
+# App Launcher [Linux - Manual]
 
 ```
 linux:
@@ -94,24 +91,30 @@ command="cd \"/path/to/exe\"" & your.exe"
 os.system(command)
 ```
 
-NOTE: Paths should NOT HAVE special characters like ' for example.
-
-NOTE 2: If on linux there is a space in the name, add a double backslash like this:
+NOTES: 
+	
+ -Paths should NOT HAVE special characters like ' for example.
+	
+ -If on linux there is a space in the name, add a double backslash like this:
 
 ```
 command="cd \"/path/to\\ my/exe\""
 ```
 
-NOTE 3: For linux users i've made a python script generator that can run .sh files directly to make things easier.
-        you can geenerate sh files using LinuxGSG in my repo, then run the generator to recursively parse the sh files
-        and write python files automatically. The script can be edited because it expects`xfce4-terminal`
-	so you can change that to the command of your terminal that you use.
+-When launching apps, do NOT reduce XBMC to icon, or else the window tries to take priority and makes the system lag.
 
-NOTE 4: When launching apps, do NOT reduce XBMC to icon, or else the window tries to take priority and makes the system lag.
 
 then you can go into "System" blade > Memory > File Explorer
 
 Q: Drive > scripts. You can also add a shortcut to the folder you need with "add sources"
+
+# App Launcher [Linux - Automatic]
+
+First, use this program to generate `sh` scripts:
+
+https://github.com/Fabxx/LinuxGSG
+
+then use `pygen.sh` to generate python scripts that will run the `sh` scripts
 
 
 
