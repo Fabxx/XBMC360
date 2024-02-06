@@ -122,49 +122,6 @@ https://github.com/Fabxx/Xbox-360-Blades-to-PC/assets/30447649/13c7ee34-70fd-40c
 https://github.com/Fabxx/Xbox-360-Blades-to-PC/assets/30447649/1c55ba55-25d1-423b-8d3b-c725c419a1ee
 
 
-
-
-
-
-# Fix Animation Loop (if broken)
-
-As you can see in media i've provided the "bkgd_frames" folder. This should already fix the animation loop but if it doesn't
-do these steps:
-
-1) Check the "skin.xml" file in MC360 2.1 folder, specifically these two parameters:
-```
-	<defaultresolution>pal</defaultresolution>
- 	 <defaultresolutionwide>pal16x9</defaultresolutionwide>
-```
-
-2) Get in the indicated folder based on your aspect ratio.
-   
-3) Open `includes.xml`, find this section:
-
-```
-<include name="Background-animation-commons">
-		<description>Background Animation</description>
-		<imagepath>BKGD_Frames</imagepath>
-		<timeperimage>0</timeperimage>
-		<fadetime>70</fadetime>
-		<loop>yes</loop>
-		<randomize>false</randomize>
-```
-
-
-change `BKGD_Frames` value to the absolute path of the folder, for example:
-
-`C:\Users\Desktop\XBMC\Skins\MC360\media\bkgd_frames`
-
-save the xml, now the animation is fixed.
-
-NOTE FOR LINUX USERS:
-
-If using under wine, instead of `C:\` you have to write the index disc as: `Z\\\\`, then each separator must have a double slash, example:
-
-`Z:\\\\media\\username\\mydisc\\XBMC\\MC360\\media\\bkgd_frames`
-
-
 # Controller Mappings
 
 enable debugging under System > System settings > Debugging in XBMC
@@ -258,3 +215,56 @@ NOTE: I provided a pre-defined controller mapping for generic Xbox 360 controlle
 
 NOTE 2: the controller name must be Exactly the same as shown in the log, there must be no difference
 	in terms of Upper/lower case letters.
+
+
+# Fix Extreme lag (Linux/Wine)
+
+in your wine prefix folder, go into `dosdevices` folder
+
+create a symlink like this:
+
+`ln -s /dev/sr0 e:`
+
+`ln -s /dev/sr0 d:`
+
+apparently this creates a symlink to the fake dvd drive looked by MC360, which then stops lagging, however the DVD button will be stuck on "Reading"
+
+
+
+# Fix Animation Loop (if broken)
+
+As you can see in media i've provided the "bkgd_frames" folder. This should already fix the animation loop but if it doesn't
+do these steps:
+
+1) Check the "skin.xml" file in MC360 2.1 folder, specifically these two parameters:
+```
+	<defaultresolution>pal</defaultresolution>
+ 	 <defaultresolutionwide>pal16x9</defaultresolutionwide>
+```
+
+2) Get in the indicated folder based on your aspect ratio.
+   
+3) Open `includes.xml`, find this section:
+
+```
+<include name="Background-animation-commons">
+		<description>Background Animation</description>
+		<imagepath>BKGD_Frames</imagepath>
+		<timeperimage>0</timeperimage>
+		<fadetime>70</fadetime>
+		<loop>yes</loop>
+		<randomize>false</randomize>
+```
+
+
+change `BKGD_Frames` value to the absolute path of the folder, for example:
+
+`C:\Users\Desktop\XBMC\Skins\MC360\media\bkgd_frames`
+
+save the xml, now the animation is fixed.
+
+NOTE FOR LINUX USERS:
+
+If using under wine, instead of `C:\` you have to write the index disc as: `Z\\\\`, then each separator must have a double slash, example:
+
+`Z:\\\\media\\username\\mydisc\\XBMC\\MC360\\media\\bkgd_frames`
