@@ -64,64 +64,22 @@ the file is self-explanatory, just change the paths with the stuff you need to p
 
 when you're gonna run the script it will play the xbox 360 boot screen, then run XBMC
 
-# App Launcher [Windows - manual]
+# App Launchers
 
 XBMC Supports python, so you can create game/emulator runners with python scripts.
 
-Install lastes python version on windows/linux, then go into "scripts" folder of XBMC
+Use this to generate `.sh` scripts (Linux) or `.lnk` and `.ps1` scripts (Windows):
 
-make a subfolder if you want so you can create script categories, create a .py file and add this
-
-```
-import os
-
-command="cd 'DiscIndex:\\Path\\to\\executable\\" & .\\your.exe"
-
-os.system(command)
-```
-# App Launcher [Linux - Manual]
-
-```
-linux:
-
-import os
-
-command="cd \"/path/to/exe\"" & your.exe"
-
-os.system(command)
-```
-
-NOTES: 
-	
- -Paths should NOT HAVE special characters like ' for example.
-	
- -If on linux there is a space in the name, add a double backslash like this:
-
-```
-command="cd \"/path/to\\ my/exe\""
-```
-
--When launching apps, do NOT reduce XBMC to icon, or else the window tries to take priority and makes the system lag.
+https://github.com/Fabxx/GSG
 
 
-then you can go into "System" blade > Memory > File Explorer
+then extract the `utilities` folder and based on your OS run the `pygen` script to generate python scripts that will run the scripts
 
-Q: Drive > scripts. You can also add a shortcut to the folder you need with "add sources"
 
-# App Launcher [Linux - Automatic]
-
-First, use this program to generate `sh` scripts:
-
-https://github.com/Fabxx/LinuxGSG
-
-then use `pygen.sh` to generate python scripts that will run the `sh` scripts
-
+then you can go into `System blade > Memory > File Explorer > Q: Drive > scripts` and execute the python scripts.
 
 
 https://github.com/Fabxx/Xbox-360-Blades-to-PC/assets/30447649/13c7ee34-70fd-40c2-840c-8a68d859125e
-
-
-
 https://github.com/Fabxx/Xbox-360-Blades-to-PC/assets/30447649/1c55ba55-25d1-423b-8d3b-c725c419a1ee
 
 
