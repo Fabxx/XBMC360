@@ -36,11 +36,11 @@ based off MC360 2.1, which fixes some paths detections to add sources.
   -If installing on default path under "Program Files (x86)", when you want to create scripts you'll need to give admin permissions
    to modify the folder. If you want to avoid this, simply install under C:\ or any other path.
 
-2) Drag & drop MC360 2.1 Folder into skins folder of XBMC, then select it from system settings of XBMC
+2) Drag & drop `MC360 2.1` Folder into `skins` folder of XBMC, then select it from system settings of XBMC
 
-3) To enable login screen go into Profiles and enable the tick of the login screen.
+3) To enable login screen go into `Profiles` and enable the tick of the login screen.
 
-4) Linux users should install `dxvk` in their prefix through: `winetricks dxvk`  
+4) For Linux users: `winetricks dxvk`, needed to render properly the loop animation.  
 
 # Customization - Profile Picture
 
@@ -78,22 +78,31 @@ then extract the `utilities` folder and based on your OS run the `pygen` script 
 
 then you can go into `System blade > Memory > File Explorer > Q: Drive > scripts` and execute the python scripts.
 
+Linux script showcase:
+
 
 https://github.com/Fabxx/Xbox-360-Blades-to-PC/assets/30447649/13c7ee34-70fd-40c2-840c-8a68d859125e
+
+
 https://github.com/Fabxx/Xbox-360-Blades-to-PC/assets/30447649/1c55ba55-25d1-423b-8d3b-c725c419a1ee
 
 
 # Controller Mappings
 
-enable debugging under System > System settings > Debugging in XBMC
+enable debugging under `System > System settings > Debugging` in XBMC
 
-now when you press a button on your controller in the XBMC.log file, located in C:\User\AppData\Roaming\XBMC, you will notice these log messages:
+now when you press a button on your controller, then in the `XBMC.log` file located in `C:\User\AppData\Roaming\XBMC`, you will notice these log messages:
+
 ```
 02:09:05 T:8784 M:4294967295   DEBUG: Joystick 0 button 1 Down
 02:09:05 T:8784 M:4294967295   DEBUG: Joystick 0 button 1 Up
 ```
 
-gather all button IDs by pressing all buttons on controllers, then in the log file check the name of the detected controller, example in my case:
+for d-pads the button is indicated as `hat`:
+
+first get all button IDs by pressing all buttons on controllers, you can write them down on a txt file along the pressed button name so you can remember. 
+
+then in the log file check the name of the `detected controller`, example in my case:
 
 ```
 02:08:26 T:8784 M:4294967295  NOTICE: Enabled Joystick: Controller (XBOX 360 For Windows)
@@ -101,82 +110,43 @@ gather all button IDs by pressing all buttons on controllers, then in the log fi
 
 Now go into XBMC/system/Keymaps, here you need `gamepad.xml`
 
-If you use a logitech controller or similar layouts, you can copy paste the file `joystick.Logitech.RumblePad.2.xml`
+If you use a logitech controller or similar xbox layouts, you can copy paste the file `joystick.Logitech.RumblePad.2.xml`
+
+you can also check a picture of that controller to get the idea.
 
 rename it into the joystick name you've found in the log. Don't put spaces, use dots like the original file name. Example:
 
 `joystick.Controller.(XBOX.360.For.Windows)`
 
-NOTE: under wine you should have: `Wine joystick driver` as the gamepad name
+NOTE: under wine you should have: `Wine joystick driver` as the gamepad name.
 
-open `gamepad.xml` and `your controller xml` with notepad++ or anything useful for xml editing.
+Now open `gamepad.xml` and `your controller xml` with notepad++ or anything useful for xml editing.
 
-`gamepad.xml` contains the button definitions for XBMC, for example A is used to "Select" action, B is used to "Previous menu" action, and so on.
+`gamepad.xml` contains the action names for XBMC
 
-You have to compare your button IDs and change the button ID in the action of your copy-pasted xml.
+If the action already exists but it's wrongly binded, just change the button ID with yours.
 
-Also, the main section is the `<global>` section that maps the main keys
+if the action does not exist, you can create a new one by copy-pasting the line and editing it.
 
-example:
-```
-<button id="2">Select</button>
-<button id="3">PreviousMenu</button>
-```
-
-in gamepad.xml select and previousmenu are:
-```
- <A>Select</A>
- <B>ParentDir</B>
-```
-
-NOTE: Different menus can use different actions for same buttons.
-
- in my XBMC.log when i press A and B i have:
+the main section to edit is the `<global>` section that maps the main keys
  
-```
- Joystick 0 button 1 Down for A
- Joystick 0 button 2 Down for B
-```
-
-when i press B and X i have
-```
- Joystick 0 button 2 Down for A
- Joystick 0 button 3 Down for B
-```
-
- so now the original config uses B and X to select and exit a window, which is wrong. So i replace it with my IDs:
- 
-```
-<button id="1">Select</button>
-<button id="2">PreviousMenu</button>
-```
-
-you can also add a mapping if it's not available, like if you just want to go up a single folder you need ParentDir mapping:
-
-`<button id="3">ParentDir</button>`
-
-in my case i mapped it to X
-
-NOTE: for d-pads the button is indicated as "hat":
-
-`Joystick 0 hat 1 Down`
- 
-Also, change all the `name` controller parameters into your game controller name.
+Now change all the `name` parameters into your game controller name.
 
 Example:
 
-<joystick name="Logitech Logitech Cordless RumblePad 2">
+`<joystick name="Logitech Logitech Cordless RumblePad 2">`
 
-replace ALL of these with your controller name, in my case:
+into:
 
-<joystick name="Controller (XBOX 360 For Windows)">
+`<joystick name="Controller (XBOX 360 For Windows)">`
 
 
-NOTE: I provided a pre-defined controller mapping for generic Xbox 360 controllers for windows and wine
+I provided a pre-defined controller mapping for generic Xbox 360 controllers for windows and wine, you can tweak it too.
 
-NOTE 2: the controller name must be Exactly the same as shown in the log, there must be no difference
+NOTE: the controller name must be Exactly the same as shown in the log, there must be no difference
 	in terms of Upper/lower case letters.
 
+# [Troubleshooting]
 
 # Fix Extreme lag (Linux/Wine)
 
