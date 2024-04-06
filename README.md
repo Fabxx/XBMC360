@@ -2,10 +2,6 @@
 
 ![xbmclive_homelogo](https://github.com/Fabxx/Xbox-360-Blades-to-PC/assets/30447649/585efb68-ec02-43cd-8541-7dbe5fd7d583)
 
-Discord server for support:
-
-https://discord.gg/2SEhnAYvUf
-
 
 this is for XBMC 9.11 on Desktop, Linux (wine) and Windows
 
