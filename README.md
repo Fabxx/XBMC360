@@ -81,8 +81,7 @@ then you can go into `System blade > Memory > File Explorer > Q: Drive > scripts
 Linux script showcase:
 
 
-https://github.com/Fabxx/Xbox-360-Blades-to-PC/assets/30447649/13c7ee34-70fd-40c2-840c-8a68d859125e
-
+https://github.com/user-attachments/assets/2c6a2ecb-c867-4ac1-91c4-4ba65576b1c7
 
 https://github.com/Fabxx/Xbox-360-Blades-to-PC/assets/30447649/1c55ba55-25d1-423b-8d3b-c725c419a1ee
 
